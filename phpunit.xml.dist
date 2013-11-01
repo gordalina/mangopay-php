@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         syntaxCheck="false"
+         bootstrap="tests/bootstrap.php"
+         colors="true"
+>
+    <testsuites>
+        <testsuite name="Gordalina Mangopay Test Suite">
+            <directory>./tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <groups>
+        <exclude>
+            <group>integration</group>
+        </exclude>
+    </groups>
+
+    <!-- Set your credentials below and set MANGOPAY_RUN_INTEGRATION_TESTS to true -->
+    <php>
+        <const name="MANGOPAY_RUN_INTEGRATION_TESTS" value="false" />
+        <const name="MANGOPAY_PARTNER" value="partner" />
+        <const name="MANGOPAY_PRIVATE_KEY" value="file://<path> or private key" />
+        <const name="MANGOPAY_PRIVATE_KEY_PASSPHRASE" value="" />
+    </php>
+</phpunit>
