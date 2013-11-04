@@ -11,7 +11,7 @@
 
 namespace Gordalina\Mangopay\Model;
 
-class ContributionByWithdrawal extends TimestampableModel
+class Withdrawal extends TimestampableModel
 {
     /**
      * @var integer

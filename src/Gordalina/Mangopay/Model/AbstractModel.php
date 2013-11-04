@@ -19,7 +19,7 @@ abstract class AbstractModel
     protected $ID;
 
     /**
-     * @var integer
+     * @var string
      */
     protected $Tag;
 

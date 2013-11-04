@@ -29,7 +29,7 @@ class Operations extends TimestampableModel
     protected $Amount;
 
     /**
-     * @var integer
+     * @var string
      */
     protected $TransactionType;
 
