@@ -75,4 +75,37 @@ class CreateUserTest extends MangopayTestCase
         $this->assertSame($entity->getPersonType(), $responseEntity->getPersonType());
         $this->assertSame($entity->getNationality(), $responseEntity->getNationality());
     }
+    public function testLegalPersonalityFields()
+    {
+        $entity = new User();
+        $entity->setEmail('example@domain.com');
+        $entity->setFirstName('John');
+        $entity->setLastName('Doe');
+        $entity->setIP('127.0.0.1');
+        $entity->setBirthday(new \DateTime('1980-10-31'));
+        $entity->setNationality('US');
+        $entity->setPersonType(User::LEGAL_PERSONALITY);
+
+        $response = $this->getClient()->request(new CreateUser($entity));
+        var_dump($response);die;
+        $this->assertInstanceOf('Gordalina\Mangopay\Response\ResponseInterface', $response);
+        $this->assertTrue($response->isSuccessful());
+
+        $responseEntity = $response->getModel();
+        $this->assertFalse($entity === $responseEntity);
+        $this->assertSame($entity->getEmail(), $responseEntity->getEmail());
+        $this->assertSame($entity->getFirstName(), $responseEntity->getFirstName());
+        $this->assertSame($entity->getLastName(), $responseEntity->getLastName());
+        $this->assertSame($entity->getIP(), $responseEntity->getIP());
+        $this->assertSame($entity->getBirthday(), $responseEntity->getBirthday());
+        $this->assertSame($entity->getPersonType(), $responseEntity->getPersonType());
+        $this->assertSame($entity->getNationality(), $responseEntity->getNationality());
+
+        $this->assertGreaterThan(0, $responseEntity->getID());
+        $this->assertGreaterThan(0, $responseEntity->getCreationDate());
+        $this->assertFalse($responseEntity->getHasRegisteredMeansOfPayment());
+        $this->assertFalse($responseEntity->getCanRegisterMeanOfPayment());
+        $this->assertSame(0, $responseEntity->getPersonalWalletAmount());
+        $this->assertFalse($responseEntity->getIsStrongAuthenticated());
+    }
 }
