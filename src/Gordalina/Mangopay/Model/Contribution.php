@@ -118,7 +118,7 @@ class Contribution extends TimestampableModel
         // to have more than 2500 euros you need to have strong auth
 
         return $this->UserID
-            && $this->WalletID
+            && $this->WalletID >= 0
             && $this->Amount > 100
             && $this->ReturnURL;
     }
