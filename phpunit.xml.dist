@@ -23,7 +23,6 @@
         </exclude>
     </groups>
 
-    <!-- Set your credentials below and set MANGOPAY_RUN_INTEGRATION_TESTS to true -->
     <php>
         <const name="MANGOPAY_RUN_INTEGRATION_TESTS" value="false" />
         <const name="MANGOPAY_PARTNER" value="partner" />
