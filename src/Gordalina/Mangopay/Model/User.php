@@ -278,7 +278,7 @@ class User extends TimestampableModel
      */
     public function setNationality($Nationality)
     {
-        if (!Utils::isISO3166($Nationality)) {
+        if ($Nationality !== null && !Utils::isISO3166($Nationality)) {
             throw new \InvalidArgumentException(sprintf('Invalid nationality iso code: %s', $Nationality));
         }
 
