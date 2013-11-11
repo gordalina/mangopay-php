@@ -13,7 +13,7 @@ namespace Gordalina\Mangopay\Response;
 
 use Exception;
 
-class ResponseException extends Exception implements ResponseInferface
+class ResponseException extends Exception implements ResponseInterface
 {
     /**
      * @var integer
