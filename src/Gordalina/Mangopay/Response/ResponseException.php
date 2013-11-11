@@ -11,8 +11,20 @@
 
 namespace Gordalina\Mangopay\Response;
 
-class ResponseException extends Response
+use Exception;
+
+class ResponseException extends Exception implements ResponseInferface
 {
+    /**
+     * @var integer
+     */
+    protected $statusCode;
+
+    /**
+     * @var string
+     */
+    protected $body;
+
     /**
      * @var integer
      */
@@ -39,8 +51,8 @@ class ResponseException extends Response
      */
     public function __construct($statusCode, $body)
     {
-        $this->setStatusCode($statusCode);
-        $this->setBody($body);
+        $this->statusCode = $statusCode;
+        $this->body = $body;
 
         $object = json_decode($body);
 
@@ -48,6 +60,52 @@ class ResponseException extends Response
         $this->technicalMessage = $object->TechnicalMessage;
         $this->userMessage = $object->UserMessage;
         $this->type = $object->Type;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getStatusCode()
+    {
+        return $this->statusCode;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBody()
+    {
+        return $this->body;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function isSuccessful()
+    {
+        return $this->statusCode >= 200 && $this->statusCode < 300;
+    }
+
+    /**
+     * @param  integer  $statusCode
+     * @return Response
+     */
+    public function setStatusCode($statusCode)
+    {
+        $this->statusCode = $statusCode;
+
+        return $this;
+    }
+
+    /**
+     * @param  integer  $body
+     * @return Response
+     */
+    public function setBody($body)
+    {
+        $this->body = $body;
+
+        return $this;
     }
 
     /**
