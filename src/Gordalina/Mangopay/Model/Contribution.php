@@ -11,9 +11,6 @@
 
 namespace Gordalina\Mangopay\Model;
 
-use DateTime;
-use Gordalina\Mangopay\Utils;
-
 class Contribution extends TimestampableModel
 {
     const TYPE_PAYLINE = 'Payline';
@@ -116,10 +113,9 @@ class Contribution extends TimestampableModel
     {
         // A contribution must be between 101 and 2500 euros
         // to have more than 2500 euros you need to have strong auth
-
         return $this->UserID
             && $this->WalletID >= 0
-            && $this->Amount > 100
+            && $this->Amount >= 100
             && $this->ReturnURL;
     }
 
@@ -129,8 +125,8 @@ class Contribution extends TimestampableModel
     public function isValidImmediateContribution()
     {
         return $this->UserID
-            && $this->WalletID
-            && $this->Amount
+            && $this->WalletID >= 0
+            && $this->Amount >= 100
             && $this->PaymentCardID;
     }
 
@@ -278,184 +274,201 @@ class Contribution extends TimestampableModel
         return $this->AnswerMessage;
     }
 
-
     /**
-     * @param  integer $UserID
+     * @param  integer      $UserID
      * @return Contribution
      */
     public function setUserID($UserID)
     {
         $this->UserID = $UserID;
+
         return $this;
     }
 
     /**
-     * @param  integer $WalletID
+     * @param  integer      $WalletID
      * @return Contribution
      */
     public function setWalletID($WalletID)
     {
         $this->WalletID = $WalletID;
+
         return $this;
     }
 
     /**
-     * @param  integer $Amount
+     * @param  integer      $Amount
      * @return Contribution
      */
     public function setAmount($Amount)
     {
         $this->Amount = $Amount;
+
         return $this;
     }
 
     /**
-     * @param  integer $ClientFeeAmount
+     * @param  integer      $ClientFeeAmount
      * @return Contribution
      */
     public function setClientFeeAmount($ClientFeeAmount)
     {
         $this->ClientFeeAmount = $ClientFeeAmount;
+
         return $this;
     }
 
     /**
-     * @param  integer $LeetchiFeeAmount
+     * @param  integer      $LeetchiFeeAmount
      * @return Contribution
      */
     public function setLeetchiFeeAmount($LeetchiFeeAmount)
     {
         $this->LeetchiFeeAmount = $LeetchiFeeAmount;
+
         return $this;
     }
 
     /**
-     * @param  boolean $IsSucceeded
+     * @param  boolean      $IsSucceeded
      * @return Contribution
      */
     public function setIsSucceeded($IsSucceeded)
     {
         $this->IsSucceeded = $IsSucceeded;
+
         return $this;
     }
 
     /**
-     * @param  boolean $IsCompleted
+     * @param  boolean      $IsCompleted
      * @return Contribution
      */
     public function setIsCompleted($IsCompleted)
     {
         $this->IsCompleted = $IsCompleted;
+
         return $this;
     }
 
     /**
-     * @param  string $PaymentURL
+     * @param  string       $PaymentURL
      * @return Contribution
      */
     public function setPaymentURL($PaymentURL)
     {
         $this->PaymentURL = $PaymentURL;
+
         return $this;
     }
 
     /**
-     * @param  string $TemplateURL
+     * @param  string       $TemplateURL
      * @return Contribution
      */
     public function setTemplateURL($TemplateURL)
     {
         $this->TemplateURL = $TemplateURL;
+
         return $this;
     }
 
     /**
-     * @param  string $ReturnURL
+     * @param  string       $ReturnURL
      * @return Contribution
      */
     public function setReturnURL($ReturnURL)
     {
         $this->ReturnURL = $ReturnURL;
+
         return $this;
     }
 
     /**
-     * @param  boolean $RegisterMeanOfPayment
+     * @param  boolean      $RegisterMeanOfPayment
      * @return Contribution
      */
     public function setRegisterMeanOfPayment($RegisterMeanOfPayment)
     {
         $this->RegisterMeanOfPayment = $RegisterMeanOfPayment;
+
         return $this;
     }
 
     /**
-     * @param  mixed $Error
+     * @param  mixed        $Error
      * @return Contribution
      */
     public function setError($Error)
     {
         $this->Error = $Error;
+
         return $this;
     }
 
     /**
-     * @param  integer $PaymentCardID
+     * @param  integer      $PaymentCardID
      * @return Contribution
      */
     public function setPaymentCardID($PaymentCardID)
     {
         $this->PaymentCardID = $PaymentCardID;
+
         return $this;
     }
 
     /**
-     * @param  string $Culture
+     * @param  string       $Culture
      * @return Contribution
      */
     public function setCulture($Culture)
     {
         $this->Culture = $Culture;
+
         return $this;
     }
 
     /**
-     * @param  string $Type
+     * @param  string       $Type
      * @return Contribution
      */
     public function setType($Type)
     {
         $this->Type = $Type;
+
         return $this;
     }
 
     /**
-     * @param  string $PaymentMethodType
+     * @param  string       $PaymentMethodType
      * @return Contribution
      */
     public function setPaymentMethodType($PaymentMethodType)
     {
         $this->PaymentMethodType = $PaymentMethodType;
+
         return $this;
     }
 
     /**
-     * @param  string $AnswerCode
+     * @param  string       $AnswerCode
      * @return Contribution
      */
     public function setAnswerCode($AnswerCode)
     {
         $this->AnswerCode = $AnswerCode;
+
         return $this;
     }
 
     /**
-     * @param  string $AnswerMessage
+     * @param  string       $AnswerMessage
      * @return Contribution
      */
     public function setAnswerMessage($AnswerMessage)
     {
         $this->AnswerMessage = $AnswerMessage;
+
         return $this;
     }
 }
