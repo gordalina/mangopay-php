@@ -103,57 +103,62 @@ class PaymentCard extends TimestampableModel
     }
 
     /**
-     * @param  integer $OwnerID
+     * @param  integer     $OwnerID
      * @return PaymentCard
      */
     public function setOwnerID($OwnerID)
     {
         $this->OwnerID = $OwnerID;
+
         return $this;
     }
 
     /**
-     * @param  string $CardNumber
+     * @param  string      $CardNumber
      * @return PaymentCard
      */
     public function setCardNumber($CardNumber)
     {
         $this->CardNumber = $CardNumber;
+
         return $this;
     }
 
     /**
-     * @param  string $RedirectURL
+     * @param  string      $RedirectURL
      * @return PaymentCard
      */
     public function setRedirectURL($RedirectURL)
     {
         $this->RedirectURL = $RedirectURL;
+
         return $this;
     }
 
     /**
-     * @param  string $TemplateURL
+     * @param  string      $TemplateURL
      * @return PaymentCard
      */
     public function setTemplateURL($TemplateURL)
     {
         $this->TemplateURL = $TemplateURL;
+
         return $this;
     }
 
     /**
-     * @param  string $ReturnURL
+     * @param  string      $ReturnURL
      * @return PaymentCard
      */
     public function setReturnURL($ReturnURL)
     {
         $this->ReturnURL = $ReturnURL;
+
         return $this;
     }
 
     /**
-     * @param  string $Culture
+     * @param  string      $Culture
      * @return PaymentCard
      */
     public function setCulture($Culture)
@@ -163,6 +168,7 @@ class PaymentCard extends TimestampableModel
         }
 
         $this->Culture = $Culture;
+
         return $this;
     }
 }

@@ -34,7 +34,7 @@ class CreateRefund extends RequestModel implements RequestInterface
     }
 
     /**
-     * @param  Refund $refund
+     * @param  Refund                    $refund
      * @throws \InvalidArgumentException If $refund is not valid
      */
     public function __construct(Refund $refund)

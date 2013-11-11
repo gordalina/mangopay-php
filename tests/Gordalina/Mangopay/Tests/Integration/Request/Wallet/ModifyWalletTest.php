@@ -13,7 +13,6 @@ namespace Gordalina\Mangopay\Tests\Integration\Request\Wallet;
 
 use Gordalina\Mangopay\Model\Wallet;
 use Gordalina\Mangopay\Request\Wallet\ModifyWallet;
-use Gordalina\Mangopay\Request\Wallet\FetchWallet;
 use Gordalina\Mangopay\Tests\Integration\Request\MangopayTestCase;
 
 class ModifyWalletTest extends MangopayTestCase

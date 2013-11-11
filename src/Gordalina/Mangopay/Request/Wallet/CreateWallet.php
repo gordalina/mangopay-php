@@ -34,7 +34,7 @@ class CreateWallet extends RequestModel implements RequestInterface
     }
 
     /**
-     * @param  Wallet $wallet
+     * @param  Wallet                    $wallet
      * @throws \InvalidArgumentException If $wallet is not valid
      */
     public function __construct(Wallet $wallet)

@@ -48,22 +48,24 @@ abstract class Response implements ResponseInterface
     }
 
     /**
-     * @param  integer $statusCode
+     * @param  integer  $statusCode
      * @return Response
      */
     public function setStatusCode($statusCode)
     {
         $this->statusCode = $statusCode;
+
         return $this;
     }
 
     /**
-     * @param  integer $body
+     * @param  integer  $body
      * @return Response
      */
     public function setBody($body)
     {
         $this->body = $body;
+
         return $this;
     }
 }

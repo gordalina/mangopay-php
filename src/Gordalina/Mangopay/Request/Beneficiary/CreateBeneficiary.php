@@ -34,7 +34,7 @@ class CreateBeneficiary extends RequestModel implements RequestInterface
     }
 
     /**
-     * @param  Beneficiary $beneficiary
+     * @param  Beneficiary               $beneficiary
      * @throws \InvalidArgumentException If $beneficiary is not valid
      */
     public function __construct(Beneficiary $beneficiary)

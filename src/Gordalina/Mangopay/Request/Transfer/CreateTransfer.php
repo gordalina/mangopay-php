@@ -34,7 +34,7 @@ class CreateTransfer extends RequestModel implements RequestInterface
     }
 
     /**
-     * @param  Transfer $transfer
+     * @param  Transfer                  $transfer
      * @throws \InvalidArgumentException If $transfer is not valid
      */
     public function __construct(Transfer $transfer)

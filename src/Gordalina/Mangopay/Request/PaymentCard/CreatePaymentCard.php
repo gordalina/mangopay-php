@@ -34,7 +34,7 @@ class CreatePaymentCard extends RequestModel implements RequestInterface
     }
 
     /**
-     * @param  PaymentCard $card
+     * @param  PaymentCard               $card
      * @throws \InvalidArgumentException If $card is not valid
      */
     public function __construct(PaymentCard $card)

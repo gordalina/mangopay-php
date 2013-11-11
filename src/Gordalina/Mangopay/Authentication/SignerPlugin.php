@@ -40,7 +40,7 @@ class SignerPlugin implements EventSubscriberInterface
     /**
      * Request before-send event handler
      *
-     * @param Event $event Event received
+     * @param  Event $event Event received
      * @return null
      */
     public function onRequestBeforeSend(Event $event)

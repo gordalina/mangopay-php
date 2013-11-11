@@ -34,7 +34,7 @@ class CreateWithdrawal extends RequestModel implements RequestInterface
     }
 
     /**
-     * @param  Withdrawal $withdrawal
+     * @param  Withdrawal                $withdrawal
      * @throws \InvalidArgumentException If $withdrawal is not valid
      */
     public function __construct(Withdrawal $withdrawal)

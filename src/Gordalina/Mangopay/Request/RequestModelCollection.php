@@ -11,7 +11,6 @@
 
 namespace Gordalina\Mangopay\Request;
 
-use Gordalina\Mangopay\Model\AbstractModel;
 use Gordalina\Mangopay\Response\ResponseInterface;
 
 abstract class RequestModelCollection extends RequestModel

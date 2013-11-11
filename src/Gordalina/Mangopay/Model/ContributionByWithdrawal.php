@@ -156,104 +156,113 @@ class ContributionByWithdrawal extends TimestampableModel
         return $this->BankAccountBIC;
     }
 
-
     /**
-     * @param  integer $UserID
+     * @param  integer                  $UserID
      * @return ContributionByWithdrawal
      */
     public function setUserID($UserID)
     {
         $this->UserID = $UserID;
+
         return $this;
     }
 
     /**
-     * @param  integer $WalletID
+     * @param  integer                  $WalletID
      * @return ContributionByWithdrawal
      */
     public function setWalletID($WalletID)
     {
         $this->WalletID = $WalletID;
+
         return $this;
     }
 
     /**
-     * @param  integer $AmountDeclared
+     * @param  integer                  $AmountDeclared
      * @return ContributionByWithdrawal
      */
     public function setAmountDeclared($AmountDeclared)
     {
         $this->AmountDeclared = $AmountDeclared;
+
         return $this;
     }
 
     /**
-     * @param  integer $Status
+     * @param  integer                  $Status
      * @return ContributionByWithdrawal
      */
     public function setStatus($Status)
     {
         $this->Status = $Status;
+
         return $this;
     }
 
     /**
-     * @param  integer $Amount
+     * @param  integer                  $Amount
      * @return ContributionByWithdrawal
      */
     public function setAmount($Amount)
     {
         $this->Amount = $Amount;
+
         return $this;
     }
 
     /**
-     * @param  string $GeneratedReference
+     * @param  string                   $GeneratedReference
      * @return ContributionByWithdrawal
      */
     public function setGeneratedReference($GeneratedReference)
     {
         $this->GeneratedReference = $GeneratedReference;
+
         return $this;
     }
 
     /**
-     * @param  string $Commentary
+     * @param  string                   $Commentary
      * @return ContributionByWithdrawal
      */
     public function setCommentary($Commentary)
     {
         $this->Commentary = $Commentary;
+
         return $this;
     }
 
     /**
-     * @param  string $BankAccountOwner
+     * @param  string                   $BankAccountOwner
      * @return ContributionByWithdrawal
      */
     public function setBankAccountOwner($BankAccountOwner)
     {
         $this->BankAccountOwner = $BankAccountOwner;
+
         return $this;
     }
 
     /**
-     * @param  string $BankAccountIBAN
+     * @param  string                   $BankAccountIBAN
      * @return ContributionByWithdrawal
      */
     public function setBankAccountIBAN($BankAccountIBAN)
     {
         $this->BankAccountIBAN = $BankAccountIBAN;
+
         return $this;
     }
 
     /**
-     * @param  string $BankAccountBIC
+     * @param  string                   $BankAccountBIC
      * @return ContributionByWithdrawal
      */
     public function setBankAccountBIC($BankAccountBIC)
     {
         $this->BankAccountBIC = $BankAccountBIC;
+
         return $this;
     }
 }

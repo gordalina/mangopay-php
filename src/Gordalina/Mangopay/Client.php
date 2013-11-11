@@ -58,7 +58,7 @@ class Client
     }
 
     /**
-     * @param  RequestInterface $request
+     * @param  RequestInterface  $request
      * @return ResponseInterface
      */
     public function request(RequestInterface $request)
@@ -75,7 +75,7 @@ class Client
 
         if ($request instanceof RequestModelCollection) {
             $response = new ResponseModelCollection();
-        } else if ($request instanceof RequestModel) {
+        } elseif ($request instanceof RequestModel) {
             $response = new ResponseModel();
         } else {
             $response = new Response();

@@ -34,7 +34,7 @@ class CreateContribution extends RequestModel implements RequestInterface
     }
 
     /**
-     * @param  Contribution $contribution
+     * @param  Contribution              $contribution
      * @throws \InvalidArgumentException If $contribution is not valid
      */
     public function __construct(Contribution $contribution)

@@ -36,7 +36,6 @@ interface RequestInterface
      */
     public function getBody();
 
-
     /**
      * @param  ResponseInterface $response
      * @return null

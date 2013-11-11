@@ -110,6 +110,7 @@ class Operations extends TimestampableModel
     public function setUserID($UserID)
     {
         $this->UserID = $UserID;
+
         return $this;
     }
 
@@ -120,6 +121,7 @@ class Operations extends TimestampableModel
     public function setWalletID($WalletID)
     {
         $this->WalletID = $WalletID;
+
         return $this;
     }
 
@@ -130,16 +132,18 @@ class Operations extends TimestampableModel
     public function setAmount($Amount)
     {
         $this->Amount = $Amount;
+
         return $this;
     }
 
     /**
-     * @param  string    $TransactionType
+     * @param  string     $TransactionType
      * @return Operations
      */
     public function setTransactionType($TransactionType)
     {
         $this->TransactionType = $TransactionType;
+
         return $this;
     }
 
@@ -150,6 +154,7 @@ class Operations extends TimestampableModel
     public function setTransactionID($TransactionID)
     {
         $this->TransactionID = $TransactionID;
+
         return $this;
     }
 }

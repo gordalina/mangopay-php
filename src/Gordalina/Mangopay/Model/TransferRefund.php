@@ -49,22 +49,24 @@ class TransferRefund extends TimestampableModel
     }
 
     /**
-     * @param  integer  $UserID
+     * @param  integer        $UserID
      * @return TransferRefund
      */
     public function setUserID($UserID)
     {
         $this->UserID = $UserID;
+
         return $this;
     }
 
     /**
-     * @param  integer  $TransferID
+     * @param  integer        $TransferID
      * @return TransferRefund
      */
     public function setTransferID($TransferID)
     {
         $this->TransferID = $TransferID;
+
         return $this;
     }
 }

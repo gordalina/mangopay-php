@@ -103,6 +103,7 @@ class Refund extends TimestampableModel
     public function setUserID($UserID)
     {
         $this->UserID = $UserID;
+
         return $this;
     }
 
@@ -113,6 +114,7 @@ class Refund extends TimestampableModel
     public function setContributionID($ContributionID)
     {
         $this->ContributionID = $ContributionID;
+
         return $this;
     }
 
@@ -123,6 +125,7 @@ class Refund extends TimestampableModel
     public function setIsSucceeded($IsSucceeded)
     {
         $this->IsSucceeded = $IsSucceeded;
+
         return $this;
     }
 
@@ -133,6 +136,7 @@ class Refund extends TimestampableModel
     public function setIsCompleted($IsCompleted)
     {
         $this->IsCompleted = $IsCompleted;
+
         return $this;
     }
 
@@ -143,6 +147,7 @@ class Refund extends TimestampableModel
     public function setError($Error)
     {
         $this->Error = $Error;
+
         return $this;
     }
 }

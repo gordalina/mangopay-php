@@ -36,8 +36,8 @@ class CreateUserStrongAuthentication extends RequestModel implements RequestInte
     }
 
     /**
-     * @param  integer              $id
-     * @param  StrongAuthentication $StrongAuthentication
+     * @param integer              $id
+     * @param StrongAuthentication $StrongAuthentication
      */
     public function __construct($id, StrongAuthentication $StrongAuthentication)
     {

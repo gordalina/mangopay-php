@@ -34,7 +34,7 @@ class CreateContributionByWithdrawal extends RequestModel implements RequestInte
     }
 
     /**
-     * @param  ContributionByWithdrawal $contributionByWithdrawal
+     * @param  ContributionByWithdrawal  $contributionByWithdrawal
      * @throws \InvalidArgumentException If $contributionByWithdrawal is not valid
      */
     public function __construct(ContributionByWithdrawal $contributionByWithdrawal)

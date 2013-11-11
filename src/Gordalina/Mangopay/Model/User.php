@@ -200,6 +200,7 @@ class User extends TimestampableModel
     public function setEmail($Email)
     {
         $this->Email = $Email;
+
         return $this;
     }
 
@@ -210,6 +211,7 @@ class User extends TimestampableModel
     public function setFirstName($FirstName)
     {
         $this->FirstName = $FirstName;
+
         return $this;
     }
 
@@ -220,6 +222,7 @@ class User extends TimestampableModel
     public function setLastName($LastName)
     {
         $this->LastName = $LastName;
+
         return $this;
     }
 
@@ -230,6 +233,7 @@ class User extends TimestampableModel
     public function setCanRegisterMeanOfPayment($CanRegisterMeanOfPayment)
     {
         $this->CanRegisterMeanOfPayment = (boolean) $CanRegisterMeanOfPayment;
+
         return $this;
     }
 
@@ -244,6 +248,7 @@ class User extends TimestampableModel
         }
 
         $this->IP = $IP;
+
         return $this;
     }
 
@@ -269,6 +274,7 @@ class User extends TimestampableModel
     public function setPassword($Password)
     {
         $this->Password = $Password;
+
         return $this;
     }
 
@@ -283,6 +289,7 @@ class User extends TimestampableModel
         }
 
         $this->Nationality = $Nationality;
+
         return $this;
     }
 
@@ -300,6 +307,7 @@ class User extends TimestampableModel
     public function setHasRegisteredMeansOfPayment($HasRegisteredMeansOfPayment)
     {
         $this->HasRegisteredMeansOfPayment = (boolean) $HasRegisteredMeansOfPayment;
+
         return $this;
     }
 
@@ -337,6 +345,7 @@ class User extends TimestampableModel
         }
 
         $this->PersonalWalletAmount = (integer) $PersonalWalletAmount;
+
         return $this;
     }
 
@@ -349,6 +358,7 @@ class User extends TimestampableModel
     public function setIsStrongAuthenticated($IsStrongAuthenticated)
     {
         $this->IsStrongAuthenticated = (boolean) $IsStrongAuthenticated;
+
         return $this;
     }
 }

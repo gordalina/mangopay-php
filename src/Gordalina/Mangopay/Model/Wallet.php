@@ -148,12 +148,13 @@ class Wallet extends TimestampableModel
     }
 
     /**
-     * @param  array $Owners
+     * @param  array  $Owners
      * @return Wallet
      */
     public function setOwners(array $Owners)
     {
         $this->Owners = $Owners;
+
         return $this;
     }
 
@@ -164,6 +165,7 @@ class Wallet extends TimestampableModel
     public function setName($Name)
     {
         $this->Name = $Name;
+
         return $this;
     }
 
@@ -174,6 +176,7 @@ class Wallet extends TimestampableModel
     public function setDescription($Description)
     {
         $this->Description = $Description;
+
         return $this;
     }
 
@@ -184,6 +187,7 @@ class Wallet extends TimestampableModel
     public function setRaisingGoalAmount($RaisingGoalAmount)
     {
         $this->RaisingGoalAmount = $RaisingGoalAmount;
+
         return $this;
     }
 
@@ -216,6 +220,7 @@ class Wallet extends TimestampableModel
     public function setCollectedAmount($CollectedAmount)
     {
         $this->CollectedAmount = $CollectedAmount;
+
         return $this;
     }
 
@@ -228,6 +233,7 @@ class Wallet extends TimestampableModel
     public function setSpentAmount($SpentAmount)
     {
         $this->SpentAmount = $SpentAmount;
+
         return $this;
     }
 
@@ -240,6 +246,7 @@ class Wallet extends TimestampableModel
     public function setAmount($Amount)
     {
         $this->Amount = $Amount;
+
         return $this;
     }
 
@@ -252,6 +259,7 @@ class Wallet extends TimestampableModel
     public function setIsClosed($IsClosed)
     {
         $this->IsClosed = (boolean) $IsClosed;
+
         return $this;
     }
 }

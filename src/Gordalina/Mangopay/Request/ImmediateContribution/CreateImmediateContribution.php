@@ -34,7 +34,7 @@ class CreateImmediateContribution extends RequestModel implements RequestInterfa
     }
 
     /**
-     * @param  Contribution $contribution
+     * @param  Contribution              $contribution
      * @throws \InvalidArgumentException If $contribution is not valid
      */
     public function __construct(Contribution $contribution)

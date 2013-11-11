@@ -115,6 +115,7 @@ class Transfer extends TimestampableModel
     public function setPayerID($PayerID)
     {
         $this->PayerID = $PayerID;
+
         return $this;
     }
 
@@ -125,6 +126,7 @@ class Transfer extends TimestampableModel
     public function setBeneficiaryID($BeneficiaryID)
     {
         $this->BeneficiaryID = $BeneficiaryID;
+
         return $this;
     }
 
@@ -135,6 +137,7 @@ class Transfer extends TimestampableModel
     public function setAmount($Amount)
     {
         $this->Amount = $Amount;
+
         return $this;
     }
 
@@ -145,6 +148,7 @@ class Transfer extends TimestampableModel
     public function setClientFeeAmount($ClientFeeAmount)
     {
         $this->ClientFeeAmount = $ClientFeeAmount;
+
         return $this;
     }
 
@@ -155,6 +159,7 @@ class Transfer extends TimestampableModel
     public function setPayerWalletID($PayerWalletID)
     {
         $this->PayerWalletID = $PayerWalletID;
+
         return $this;
     }
 
@@ -165,6 +170,7 @@ class Transfer extends TimestampableModel
     public function setBeneficiaryWalletID($BeneficiaryWalletID)
     {
         $this->BeneficiaryWalletID = $BeneficiaryWalletID;
+
         return $this;
     }
 }

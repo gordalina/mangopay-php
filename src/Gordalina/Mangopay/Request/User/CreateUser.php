@@ -34,7 +34,7 @@ class CreateUser extends RequestModel implements RequestInterface
     }
 
     /**
-     * @param  User $user
+     * @param  User                      $user
      * @throws \InvalidArgumentException If $user is not valid
      */
     public function __construct(User $user)

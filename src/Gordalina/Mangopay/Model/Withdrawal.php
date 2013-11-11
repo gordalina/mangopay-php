@@ -11,7 +11,7 @@
 
 namespace Gordalina\Mangopay\Model;
 
-class ContributionByWithdrawal extends TimestampableModel
+class Withdrawal extends TimestampableModel
 {
     /**
      * @var integer
@@ -161,6 +161,7 @@ class ContributionByWithdrawal extends TimestampableModel
     public function setUserID($UserID)
     {
         $this->UserID = $UserID;
+
         return $this;
     }
 
@@ -171,6 +172,7 @@ class ContributionByWithdrawal extends TimestampableModel
     public function setWalletID($WalletID)
     {
         $this->WalletID = $WalletID;
+
         return $this;
     }
 
@@ -181,6 +183,7 @@ class ContributionByWithdrawal extends TimestampableModel
     public function setAmount($Amount)
     {
         $this->Amount = $Amount;
+
         return $this;
     }
 
@@ -191,6 +194,7 @@ class ContributionByWithdrawal extends TimestampableModel
     public function setAmountWithoutFees($AmountWithoutFees)
     {
         $this->AmountWithoutFees = $AmountWithoutFees;
+
         return $this;
     }
 
@@ -201,6 +205,7 @@ class ContributionByWithdrawal extends TimestampableModel
     public function setClientFeeAmount($ClientFeeAmount)
     {
         $this->ClientFeeAmount = $ClientFeeAmount;
+
         return $this;
     }
 
@@ -211,6 +216,7 @@ class ContributionByWithdrawal extends TimestampableModel
     public function setLeetchiFeeAmount($LeetchiFeeAmount)
     {
         $this->LeetchiFeeAmount = $LeetchiFeeAmount;
+
         return $this;
     }
 
@@ -221,6 +227,7 @@ class ContributionByWithdrawal extends TimestampableModel
     public function setIsCompleted($IsCompleted)
     {
         $this->IsCompleted = $IsCompleted;
+
         return $this;
     }
 
@@ -231,6 +238,7 @@ class ContributionByWithdrawal extends TimestampableModel
     public function setIsSucceeded($IsSucceeded)
     {
         $this->IsSucceeded = $IsSucceeded;
+
         return $this;
     }
 
@@ -241,6 +249,7 @@ class ContributionByWithdrawal extends TimestampableModel
     public function setBeneficiaryID($BeneficiaryID)
     {
         $this->BeneficiaryID = $BeneficiaryID;
+
         return $this;
     }
 
@@ -251,6 +260,7 @@ class ContributionByWithdrawal extends TimestampableModel
     public function setError($Error)
     {
         $this->Error = $Error;
+
         return $this;
     }
 }

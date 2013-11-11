@@ -105,72 +105,79 @@ class StrongAuthentication extends TimestampableModel
     }
 
     /**
-     * @param  integer $UserID
+     * @param  integer              $UserID
      * @return StrongAuthentication
      */
     public function setUserID($UserID)
     {
         $this->UserID = $UserID;
+
         return $this;
     }
 
     /**
-     * @param  integer $BeneficiaryID
+     * @param  integer              $BeneficiaryID
      * @return StrongAuthentication
      */
     public function setBeneficiaryID($BeneficiaryID)
     {
         $this->BeneficiaryID = $BeneficiaryID;
+
         return $this;
     }
 
     /**
-     * @param  string $UrlRequest
+     * @param  string               $UrlRequest
      * @return StrongAuthentication
      */
     public function setUrlRequest($UrlRequest)
     {
         $this->UrlRequest = $UrlRequest;
+
         return $this;
     }
 
     /**
-     * @param  boolean $IsDocumentsTransmitted
+     * @param  boolean              $IsDocumentsTransmitted
      * @return StrongAuthentication
      */
     public function setIsDocumentsTransmitted($IsDocumentsTransmitted)
     {
         $this->IsDocumentsTransmitted = $IsDocumentsTransmitted;
+
         return $this;
     }
 
     /**
-     * @param  boolean $IsCompleted
+     * @param  boolean              $IsCompleted
      * @return StrongAuthentication
      */
     public function setIsCompleted($IsCompleted)
     {
         $this->IsCompleted = $IsCompleted;
+
         return $this;
     }
 
     /**
-     * @param  boolean $IsSucceeded
+     * @param  boolean              $IsSucceeded
      * @return StrongAuthentication
      */
     public function setIsSucceeded($IsSucceeded)
     {
         $this->IsSucceeded = $IsSucceeded;
+
         return $this;
     }
 
     /**
-     * @param  string $Message
+     * @param  string               $Message
      * @return StrongAuthentication
      */
     public function setMessage($Message)
     {
         $this->Message = $Message;
+
         return $this;
     }
 }

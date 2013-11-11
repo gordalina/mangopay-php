@@ -90,52 +90,57 @@ class Beneficiary extends TimestampableModel
     }
 
     /**
-     * @param  integer $UserID
+     * @param  integer     $UserID
      * @return Beneficiary
      */
     public function setUserID($UserID)
     {
         $this->UserID = $UserID;
+
         return $this;
     }
 
     /**
-     * @param  string $BankAccountOwnerName
+     * @param  string      $BankAccountOwnerName
      * @return Beneficiary
      */
     public function setBankAccountOwnerName($BankAccountOwnerName)
     {
         $this->BankAccountOwnerName = $BankAccountOwnerName;
+
         return $this;
     }
 
     /**
-     * @param  string $BankAccountOwnerAddress
+     * @param  string      $BankAccountOwnerAddress
      * @return Beneficiary
      */
     public function setBankAccountOwnerAddress($BankAccountOwnerAddress)
     {
         $this->BankAccountOwnerAddress = $BankAccountOwnerAddress;
+
         return $this;
     }
 
     /**
-     * @param  string $BankAccountIBAN
+     * @param  string      $BankAccountIBAN
      * @return Beneficiary
      */
     public function setBankAccountIBAN($BankAccountIBAN)
     {
         $this->BankAccountIBAN = $BankAccountIBAN;
+
         return $this;
     }
 
     /**
-     * @param  string $BankAccountBIC
+     * @param  string      $BankAccountBIC
      * @return Beneficiary
      */
     public function setBankAccountBIC($BankAccountBIC)
     {
         $this->BankAccountBIC = $BankAccountBIC;
+
         return $this;
     }
 }

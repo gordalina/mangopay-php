@@ -46,16 +46,18 @@ abstract class AbstractModel
     public function setID($ID)
     {
         $this->ID = $ID;
+
         return $this;
     }
 
     /**
-     * @param  string $Tag
+     * @param  string      $Tag
      * @return Beneficiary
      */
     public function setTag($Tag)
     {
         $this->Tag = $Tag;
+
         return $this;
     }
 
@@ -84,7 +86,7 @@ abstract class AbstractModel
     }
 
     /**
-     * @param  object $object
+     * @param object $object
      */
     public function update($object)
     {
