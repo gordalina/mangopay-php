@@ -43,10 +43,9 @@ abstract class RequestModel
     }
 
     /**
-     * @param  AbstractModel $model
-     * @return null
+     * @return AbstractModel
      */
-    protected function getModel(AbstractModel $model)
+    public function getModel()
     {
         return $this->model;
     }
