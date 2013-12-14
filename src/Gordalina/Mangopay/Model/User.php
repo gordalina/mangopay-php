@@ -243,10 +243,6 @@ class User extends TimestampableModel
      */
     public function setIP($IP)
     {
-        if (!Utils::isIPv4($IP)) {
-            throw new \InvalidArgumentException(sprintf('IP is not a valid Ipv4: %s', $IP));
-        }
-
         $this->IP = $IP;
 
         return $this;
