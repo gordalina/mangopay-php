@@ -283,4 +283,80 @@ class Withdrawal extends TimestampableModel
 
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function getBankAccountOwnerName()
+    {
+        return $this->BankAccountOwnerName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBankAccountOwnerAddress()
+    {
+        return $this->BankAccountOwnerAddress;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBankAccountIBAN()
+    {
+        return $this->BankAccountIBAN;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBankAccountBIC()
+    {
+        return $this->BankAccountBIC;
+    }
+
+    /**
+     * @param  string $BankAccountOwnerName
+     * @return Withdrawal
+     */
+    public function setBankAccountOwnerName($BankAccountOwnerName)
+    {
+        $this->BankAccountOwnerName = $BankAccountOwnerName;
+
+        return $this;
+    }
+
+    /**
+     * @param  string $BankAccountOwnerAddress
+     * @return Withdrawal
+     */
+    public function setBankAccountOwnerAddress($BankAccountOwnerAddress)
+    {
+        $this->BankAccountOwnerAddress = $BankAccountOwnerAddress;
+
+        return $this;
+    }
+
+    /**
+     * @param  string $BankAccountIBAN
+     * @return Withdrawal
+     */
+    public function setBankAccountIBAN($BankAccountIBAN)
+    {
+        $this->BankAccountIBAN = $BankAccountIBAN;
+
+        return $this;
+    }
+
+    /**
+     * @param  string $BankAccountBIC
+     * @return Withdrawal
+     */
+    public function setBankAccountBIC($BankAccountBIC)
+    {
+        $this->BankAccountBIC = $BankAccountBIC;
+
+        return $this;
+    }
 }
