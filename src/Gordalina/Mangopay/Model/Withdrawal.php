@@ -64,6 +64,26 @@ class Withdrawal extends TimestampableModel
     protected $Error;
 
     /**
+     * @var string
+     */
+    protected $BankAccountOwnerName;
+
+    /**
+     * @var string
+     */
+    protected $BankAccountOwnerAddress;
+
+    /**
+     * @var string
+     */
+    protected $BankAccountIBAN;
+
+    /**
+     * @var string
+     */
+    protected $BankAccountBIC;
+
+    /**
      * @return boolean
      */
     public function isValid()
